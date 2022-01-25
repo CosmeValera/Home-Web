@@ -1,0 +1,48 @@
+header {
+  background: linear-gradient(to right, white, cyan);
+}
+a img {
+  float: left;
+}
+body {
+  background-color: cyan;
+}
+footer {
+  background-color: darkcyan;
+  color: white;
+}
+h2 {
+  color: white;
+  margin-top: 1em;
+}
+body body {
+  margin: 10%;
+}
+.table-hover {
+  background-color: white;
+}
+.table-hover > tbody > tr:hover {
+  background-color: rgb(167, 235, 122);
+  /* color: yellowgreen; */
+}
+
+.flex-a {
+  display: flex;
+  align-items: center;
+}
+
+.flex-palabra-y-margen {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 7px;
+  margin-right: 5px;
+}
+
+tbody {
+  border-radius: 25px;
+}
+
+tbody > tr {
+  border-radius: 25px;
+}
