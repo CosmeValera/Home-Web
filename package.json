@@ -1,0 +1,22 @@
+{
+  "name": "cosmechirihomeweb",
+  "version": "1.0.0",
+  "description": "Learning HTML, CSS and JS",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CosmeValera/Home-Web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CosmeValera/Home-Web/issues"
+  },
+  "homepage": "https://github.com/CosmeValera/Home-Web#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

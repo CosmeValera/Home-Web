@@ -1,0 +1,71 @@
+[
+    {
+        "img" : "aire.png",
+        "title" : "Aire del salón",
+        "desc" : "Temperatura",
+        "specs": [
+            {"type" : "Estado:", "answer" : "Encendida"},
+            {"type" : "Modo:", "answer" : "Frío"},
+            {"type" : "Temperatura:", "answer" : "21°"}
+        ] 
+    },
+    {
+        "img" : "tele.png",
+        "title" : "Tele del salón",
+        "desc" : "Electrodoméstico",
+        "specs": [
+            {"type" : "Estado:", "answer" : "Encendida"},
+            {"type" : "Canal:", "answer" : "La 1"},
+            {"type" : "Volumen:", "answer" :  {
+                "quantity": "25%",
+                "color" : "red"
+                }
+            }
+        ] 
+    }
+]
+<tr>
+    <td><img class="img-fluid" src=img/bombilla.png alt="img"></td>
+    <td>
+    <h3>Luz del dormitorio</h3>
+    Iluminación
+    </td>
+    <td>
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action">
+        Estado: <strong>Apagada</strong>
+        </a>
+    </div>
+    </td>
+</tr>
+
+<tr>
+    <td><img class="img-fluid" src=img/tele.png alt="img"></td>
+    <td>
+      <h3>Tele del salón</h3>
+      Electrodoméstico
+    </td>
+    <td>
+      <div class="list-group">
+        <a class="list-group-item list-group-item-action">
+          Estado: <strong>Encendida</strong>
+        </a>
+        <a class="list-group-item list-group-item-action">
+          Canal: <strong>La 1</strong>
+        </a>
+        <a class="flex-a list-group-item list-group-item-action">
+          <p class="flex-palabra-y-margen">Volumen:</p>
+          <div class="progress flex-grow-1">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              style="width: 25%"
+              aria-valuenow="25"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </a>
+      </div>
+    </td>
+</tr>

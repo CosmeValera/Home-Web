@@ -1,0 +1,26 @@
+[
+    {
+        "img" : "aire.png",
+        "title" : "Aire del salón",
+        "desc" : "Temperatura",
+        "specs": [
+            {"type" : "Estado:", "answer" : "Encendida"},
+            {"type" : "Modo:", "answer" : "Frío"},
+            {"type" : "Temperatura:", "answer" : "21°"}
+        ] 
+    },
+    {
+        "img" : "tele.png",
+        "title" : "Tele del salón",
+        "desc" : "Electrodoméstico",
+        "specs": [
+            {"type" : "Estado:", "answer" : "Encendida"},
+            {"type" : "Canal:", "answer" : "La 1"},
+            {"type" : "Volumen:", "answer" :  {
+                "quantity": "25%",
+                "color" : "red"
+                }
+            }
+        ] 
+    }
+]
