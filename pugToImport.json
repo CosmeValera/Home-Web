@@ -17,7 +17,7 @@
             {"type" : "Estado:", "answer" : "Encendida"},
             {"type" : "Canal:", "answer" : "La 1"},
             {"type" : "Volumen:", "answer" :  {
-                "quantity": "25%",
+                "quantity": "25",
                 "color" : "red"
                 }
             }

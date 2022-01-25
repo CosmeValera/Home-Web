@@ -1,11 +1,15 @@
-//TODO no me va el fetch, y de todas formas puedo hacer fetch a un txt que tengo dentro?
-//TODO 2, cuando me vaya eso implementar la plantilla PUG y ponerle un if por si esa spec tiene barra o no
+//TODOme dice referenceError, intentar solucionar
 async function cargarUsuarios() {
-    const respuesta = await fetch("./pugToImport.txt");
-    console.log(respuesta)
+  const respuesta = await require("./pugToImport.json");
+  if (respuesta.ok) {
+    console.table(respuesta[0]);
+    console.table(respuesta[0].specs);
 
+    document.querySelector("tbody").innerHTML += crearDispositivos({
+      dispositivos: respuesta,
+    });
+  }
 }
-
 
 //Cargar usuarios usando pug
 cargarUsuarios();

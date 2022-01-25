@@ -1,0 +1,23 @@
+each dispositivo in dispositivos 
+    tr
+        td
+            img(class="img-fluid" src=`img/${dispositivo.img}` alt="img")
+        td
+            h3=dispositivo.title
+        td
+            div(class="list-group")
+                each spec in dispositivo.specs
+                    if spec.type != "Volumen:"
+                        a(class="list-group-item list-group-item-action")=spec.type
+                            strong 
+                                spec.answer
+                    else
+                        a(class="flex-a list-group-item list-group-item-action")
+                            p(class="flex-palabra-y-margen")=spec.type
+                            div(class="progress flex-grow-1")
+                                div(class="progress-bar"
+                                    role="progressbar"
+                                    style=`width: ${spec.answer.quantity}%`
+                                    aria-valuenow=`${spec.answer.quantity}`
+                                    aria-valuemin="0"
+                                    aria-valuemax="100")
