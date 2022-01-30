@@ -4,6 +4,7 @@ each dispositivo in dispositivos
             img(class="img-fluid" src=`img/${dispositivo.img}` alt="img")
         td
             h3=dispositivo.title
+            p=dispositivo.desc
         td
             div(class="list-group")
                 each spec in dispositivo.specs

@@ -24,20 +24,49 @@
         ] 
     }
 ]
-<tr>
-    <td><img class="img-fluid" src=img/bombilla.png alt="img"></td>
-    <td>
-    <h3>Luz del dormitorio</h3>
-    Iluminación
-    </td>
-    <td>
-    <div class="list-group">
-        <a class="list-group-item list-group-item-action">
-        Estado: <strong>Apagada</strong>
-        </a>
-    </div>
-    </td>
-</tr>
+
+<td><img class="img-fluid" src=img/luzSalon.png alt="img"></td>
+<td>
+  <h3>Luz del salón</h3>
+  Iluminación
+</td>
+<td>
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action">
+      Estado: <strong>Encendida</strong>
+    </a>
+    <a class="flex-a list-group-item list-group-item-action">
+      <p class="flex-palabra-y-margen">Intensidad:</p>
+      <div class="progress flex-grow-1">
+
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 25%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+
+      </div>
+    </a>
+    <a class="flex-a list-group-item list-group-item-action">
+      <p class="flex-palabra-y-margen">Color:</p>
+      <div class="progress flex-grow-1">
+
+        <div
+          class="progress-bar bg-danger"
+          role="progressbar"
+          style="width: 50%"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+        
+      </div>
+    </a>
+  </div>
+</td>
 
 <tr>
     <td><img class="img-fluid" src=img/tele.png alt="img"></td>
@@ -68,4 +97,19 @@
         </a>
       </div>
     </td>
+</tr>
+
+<tr>
+  <td><img class="img-fluid" src=img/bombilla.png alt="img"></td>
+  <td>
+  <h3>Luz del dormitorio</h3>
+  Iluminación
+  </td>
+  <td>
+  <div class="list-group">
+      <a class="list-group-item list-group-item-action">
+      Estado: <strong>Apagada</strong>
+      </a>
+  </div>
+  </td>
 </tr>
