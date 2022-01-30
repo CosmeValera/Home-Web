@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Learning HTML, CSS and JS",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "run": "node index.js"
   },
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/CosmeValera/Home-Web#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "pug": "^3.0.2"
   }
 }

@@ -22,5 +22,22 @@
                 }
             }
         ] 
+    },
+    {
+        "img" : "luzSalon.png",
+        "title" : "Luz del salón",
+        "desc" : "Iluminación",
+        "specs": [
+            {"type" : "Estado:", "answer" : "Encendida"},
+            {"type" : "Intensidad:", "answer" : {
+                "quantity": "25",
+                "color": "blue"
+            }},
+            {"type" : "Color:", "answer" :  {
+                "quantity": "50",
+                "color" : "red"
+                }
+            }
+        ] 
     }
 ]

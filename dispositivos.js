@@ -15,11 +15,18 @@ pug_html = pug_html + "\u003Ctr\u003E\u003Ctd\u003E\u003Cimg" + (" class=\"img-f
   if ('number' == typeof $$obj.length) {
       for (var pug_index1 = 0, $$l = $$obj.length; pug_index1 < $$l; pug_index1++) {
         var spec = $$obj[pug_index1];
-if (spec.type != "Volumen:") {
-pug_html = pug_html + "\u003Ca class=\"list-group-item list-group-item-action\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003Cstrong\u003E \u003Cspec class=\"answer\"\u003E\u003C\u002Fspec\u003E\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E";
+if (spec.type != "Volumen:" && spec.type != "Intensidad:" && spec.type != "Color:") {
+pug_html = pug_html + "\u003Ca class=\"list-group-item list-group-item-action\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003Cstrong\u003E" + (pug_escape(null == (pug_interp = " " + spec.answer) ? "" : pug_interp)) + "\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E";
 }
 else {
-pug_html = pug_html + "\u003Ca class=\"flex-a list-group-item list-group-item-action\"\u003E\u003Cp class=\"flex-palabra-y-margen\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv class=\"progress flex-grow-1\"\u003E\u003Cdiv" + (" class=\"progress-bar\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fa\u003E";
+pug_html = pug_html + "\u003Ca class=\"flex-a list-group-item list-group-item-action\"\u003E\u003Cp class=\"flex-palabra-y-margen\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv class=\"progress flex-grow-1\"\u003E";
+if (spec.answer.color != "red") {
+pug_html = pug_html + "\u003Cdiv" + (" class=\"progress-bar\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E";
+}
+else {
+pug_html = pug_html + "\u003Cdiv" + (" class=\"progress-bar bg-danger\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E";
+}
+pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fa\u003E";
 }
       }
   } else {
@@ -27,11 +34,18 @@ pug_html = pug_html + "\u003Ca class=\"flex-a list-group-item list-group-item-ac
     for (var pug_index1 in $$obj) {
       $$l++;
       var spec = $$obj[pug_index1];
-if (spec.type != "Volumen:") {
-pug_html = pug_html + "\u003Ca class=\"list-group-item list-group-item-action\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003Cstrong\u003E \u003Cspec class=\"answer\"\u003E\u003C\u002Fspec\u003E\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E";
+if (spec.type != "Volumen:" && spec.type != "Intensidad:" && spec.type != "Color:") {
+pug_html = pug_html + "\u003Ca class=\"list-group-item list-group-item-action\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003Cstrong\u003E" + (pug_escape(null == (pug_interp = " " + spec.answer) ? "" : pug_interp)) + "\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E";
 }
 else {
-pug_html = pug_html + "\u003Ca class=\"flex-a list-group-item list-group-item-action\"\u003E\u003Cp class=\"flex-palabra-y-margen\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv class=\"progress flex-grow-1\"\u003E\u003Cdiv" + (" class=\"progress-bar\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fa\u003E";
+pug_html = pug_html + "\u003Ca class=\"flex-a list-group-item list-group-item-action\"\u003E\u003Cp class=\"flex-palabra-y-margen\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv class=\"progress flex-grow-1\"\u003E";
+if (spec.answer.color != "red") {
+pug_html = pug_html + "\u003Cdiv" + (" class=\"progress-bar\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E";
+}
+else {
+pug_html = pug_html + "\u003Cdiv" + (" class=\"progress-bar bg-danger\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E";
+}
+pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fa\u003E";
 }
     }
   }
@@ -51,11 +65,18 @@ pug_html = pug_html + "\u003Ctr\u003E\u003Ctd\u003E\u003Cimg" + (" class=\"img-f
   if ('number' == typeof $$obj.length) {
       for (var pug_index2 = 0, $$l = $$obj.length; pug_index2 < $$l; pug_index2++) {
         var spec = $$obj[pug_index2];
-if (spec.type != "Volumen:") {
-pug_html = pug_html + "\u003Ca class=\"list-group-item list-group-item-action\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003Cstrong\u003E \u003Cspec class=\"answer\"\u003E\u003C\u002Fspec\u003E\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E";
+if (spec.type != "Volumen:" && spec.type != "Intensidad:" && spec.type != "Color:") {
+pug_html = pug_html + "\u003Ca class=\"list-group-item list-group-item-action\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003Cstrong\u003E" + (pug_escape(null == (pug_interp = " " + spec.answer) ? "" : pug_interp)) + "\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E";
 }
 else {
-pug_html = pug_html + "\u003Ca class=\"flex-a list-group-item list-group-item-action\"\u003E\u003Cp class=\"flex-palabra-y-margen\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv class=\"progress flex-grow-1\"\u003E\u003Cdiv" + (" class=\"progress-bar\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fa\u003E";
+pug_html = pug_html + "\u003Ca class=\"flex-a list-group-item list-group-item-action\"\u003E\u003Cp class=\"flex-palabra-y-margen\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv class=\"progress flex-grow-1\"\u003E";
+if (spec.answer.color != "red") {
+pug_html = pug_html + "\u003Cdiv" + (" class=\"progress-bar\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E";
+}
+else {
+pug_html = pug_html + "\u003Cdiv" + (" class=\"progress-bar bg-danger\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E";
+}
+pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fa\u003E";
 }
       }
   } else {
@@ -63,11 +84,18 @@ pug_html = pug_html + "\u003Ca class=\"flex-a list-group-item list-group-item-ac
     for (var pug_index2 in $$obj) {
       $$l++;
       var spec = $$obj[pug_index2];
-if (spec.type != "Volumen:") {
-pug_html = pug_html + "\u003Ca class=\"list-group-item list-group-item-action\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003Cstrong\u003E \u003Cspec class=\"answer\"\u003E\u003C\u002Fspec\u003E\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E";
+if (spec.type != "Volumen:" && spec.type != "Intensidad:" && spec.type != "Color:") {
+pug_html = pug_html + "\u003Ca class=\"list-group-item list-group-item-action\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003Cstrong\u003E" + (pug_escape(null == (pug_interp = " " + spec.answer) ? "" : pug_interp)) + "\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E";
 }
 else {
-pug_html = pug_html + "\u003Ca class=\"flex-a list-group-item list-group-item-action\"\u003E\u003Cp class=\"flex-palabra-y-margen\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv class=\"progress flex-grow-1\"\u003E\u003Cdiv" + (" class=\"progress-bar\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fa\u003E";
+pug_html = pug_html + "\u003Ca class=\"flex-a list-group-item list-group-item-action\"\u003E\u003Cp class=\"flex-palabra-y-margen\"\u003E" + (pug_escape(null == (pug_interp = spec.type) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv class=\"progress flex-grow-1\"\u003E";
+if (spec.answer.color != "red") {
+pug_html = pug_html + "\u003Cdiv" + (" class=\"progress-bar\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E";
+}
+else {
+pug_html = pug_html + "\u003Cdiv" + (" class=\"progress-bar bg-danger\""+" role=\"progressbar\""+pug_attr("style", pug_style(`width: ${spec.answer.quantity}%`), true, false)+pug_attr("aria-valuenow", `${spec.answer.quantity}`, true, false)+" aria-valuemin=\"0\" aria-valuemax=\"100\"") + "\u003E\u003C\u002Fdiv\u003E";
+}
+pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fa\u003E";
 }
     }
   }
